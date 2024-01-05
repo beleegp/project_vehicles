@@ -23,7 +23,7 @@ if hist_button: # al hacer clic en el botón
 
 if scat_button: # al hacer clic en el botón
     # escribir un mensaje
-    st.write('Gráfico de dispersión según el tipo de combustible')
+    st.write('Gráfico de dispersión según modelo y año de coches')
             
     # crear un gráfico de dispersión
     fig = px.scatter(car_data, x="model", y="model_year")
