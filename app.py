@@ -15,7 +15,7 @@ if hist_button: # al hacer clic en el botón
     st.write('Frecuencia modelos de coches publicados')
             
     # crear un histograma
-    fig = px.histogram(car_data, x="type")
+    fig = px.histogram(car_data, x="model")
         
     # mostrar un gráfico Plotly interactivo
     st.plotly_chart(fig, use_container_width=True)
@@ -26,7 +26,7 @@ if scat_button: # al hacer clic en el botón
     st.write('Gráfico de dispersión según el tipo de combustible')
             
     # crear un gráfico de dispersión
-    fig = px.scatter(car_data, x="model", y="transmission", color="Tipo de combustible", symbol="fuel")
+    fig = px.scatter(car_data, x="model", y=["type", "transmission", "fuel"])
         
     # mostrar un gráfico Plotly interactivo
     st.plotly_chart(fig, use_container_width=True)
@@ -37,7 +37,7 @@ if bar_button: # al hacer clic en el botón
             
 
     # crear un gráfico de barra
-    fig = px.bar(car_data, x="model", y="price")
+    fig = px.bar(car_data, x=["model","model_year"], y="price")
         
 
     # mostrar un gráfico Plotly interactivo
